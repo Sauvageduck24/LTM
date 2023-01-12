@@ -1,6 +1,6 @@
 all the experiments have been done in the chargpt folder, with the gpt-micro (for faster execution [time]s)
 
-the models in chargpt have been trained with this file.
+the models in chargpt have been trained with [this file](https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt))
 
 trained with 20000 iterations
 
