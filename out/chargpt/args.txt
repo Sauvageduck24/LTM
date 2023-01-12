@@ -1,0 +1,1 @@
+/home/sauvageduck24/Escritorio/LTM/minGPT/projects/chargpt/chargpt.py

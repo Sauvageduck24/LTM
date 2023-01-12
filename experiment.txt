@@ -1,0 +1,17 @@
+all the experiments have been done in the chargpt folder, with the gpt-micro (for faster execution [time]s)
+
+the models in chargpt have been trained with this file.
+
+trained with 20000 iterations
+
+simple transformer => 0.83M total parameters
+best train loss with 20K iterations => 1.25
+
+transformer with ltm 2 => 0.83M total parameters
+train loss at 20K iterations => 1.17
+
+6.4% mejor que un transformer normal.
+
+transformer with ltm 1 => 0.83M total parameters
+train loss at 20K iterations => 1.17
+
