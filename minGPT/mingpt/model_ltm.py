@@ -143,9 +143,7 @@ class HCausalSelfAttention(torch.nn.Module):
         k = self.key(kv).view(B, M, self.n_heads//self.enc_dim, D // self.n_heads).transpose(1, 2) # (B, nh, M, hs)
 
         h=self.hippocampus(q)
-        #h=h.view(B, N, 1,1).transpose(1, 2)
         h=h.view(B, N, self.n_heads//self.enc_dim ,D//self.n_heads).transpose(1, 2)
-        #h=nn.Softmax(dim=3)(h)
 
         q = self.query(q).view(B, N, self.n_heads, D // self.n_heads).transpose(1, 2) # (B, nh, N, hs)
         # attention (B, nh, N, hs) x (B, nh, hs, M) -> (B, nh, N, M)
