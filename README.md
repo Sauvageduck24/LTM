@@ -1,7 +1,7 @@
 # LTM
 Experimental Long-term memory code
 
-This project his ** /add
+This repository is an experimental implementation of the Long-term Memory paper.
 
 Code based in https://github.com/karpathy/minGPT
 
