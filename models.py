@@ -211,11 +211,11 @@ class HTransformer(nn.Module):
     def __init__(self, cfg):
         super().__init__()
         self.embed = Embeddings(cfg)
-        self.blocks = nn.ModuleList([Block(cfg) for _ in range(cfg.n_layers-3)])
+        self.blocks = nn.ModuleList([Block(cfg) for _ in range(cfg.n_layers//2)])
 
         self.hpc = nn.Linear(cfg.dim, cfg.n_heads)
 
-        self.hblocks = nn.ModuleList([HBlock(cfg) for _ in range((cfg.n_layers-3))])
+        self.hblocks = nn.ModuleList([HBlock(cfg) for _ in range((cfg.n_layers//2))])
 
     def forward(self, x, seg, mask):
         h = self.embed(x, seg)
