@@ -9,4 +9,4 @@ Code based in https://github.com/dhlee347/pytorchic-bert/tree/master
 Download necesary data
 -------------------------------------
 
-[GLUE Benchmark Datasets] https://github.com/nyu-mll/GLUE-ba
+[GLUE Benchmark Datasets] https://github.com/nyu-mll/GLUE-baselines
