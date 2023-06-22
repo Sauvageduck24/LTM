@@ -46,7 +46,7 @@ Accuracy: 0.6936274766921997
 Commands to run
 -------------------------------------
 
-###Train
+### Train
 
 ```
 export GLUE_DIR=/path/to/glue
@@ -65,7 +65,7 @@ python classify.py \
     --max_len 128
 ```
 
-###Evaluation
+### Evaluation
 
 ```
 export GLUE_DIR=/path/to/glue
