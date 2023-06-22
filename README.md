@@ -3,12 +3,13 @@ Experimental Long-term memory code
 
 This repository is an experimental implementation of the Long-term Memory paper.
 
-Code based in https://github.com/dhlee347/pytorchic-bert/tree/master
+Code based in https://github.com/dhlee347/pytorchic-bert
 
 Download necesary data
 -------------------------------------
 
 [GLUE Benchmark Datasets] https://github.com/nyu-mll/GLUE-baselines
+[BERT-Base, Uncased] https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip
 
 Simple Transformer (67.0 M Parameters)
 -------------------------------------
@@ -43,3 +44,42 @@ Iter(acc=0.708): 100%|███████████████████�
 Accuracy: 0.6936274766921997
 ```
 
+Commands to run
+-------------------------------------
+
+###Train
+
+```
+export GLUE_DIR=/path/to/glue
+export SAVE_DIR=/path/to/save
+export BERT_PRETRAIN=/path/to/pretrain
+
+python classify.py \
+    --task mrpc \
+    --mode train \
+    --train_cfg config/train_mrpc.json \
+    --model_cfg config/bert_base.json \
+    --data_file $GLUE_DIR/MRPC/train.tsv \
+    --pretrain_file None \
+    --vocab $BERT_PRETRAIN/vocab.txt \
+    --save_dir $SAVE_DIR \
+    --max_len 128
+```
+
+###Evaluation
+
+```
+export GLUE_DIR=/path/to/glue
+export SAVE_DIR=/path/to/save
+export BERT_PRETRAIN=/path/to/pretrain
+
+python classify.py \
+    --task mrpc \
+    --mode eval \
+    --train_cfg config/train_mrpc.json \
+    --model_cfg config/bert_base.json \
+    --data_file $GLUE_DIR/MRPC/dev.tsv \
+    --model_file $SAVE_DIR/model_steps_345.pt \
+    --vocab $BERT_PRETRAIN/vocab.txt \
+    --max_len 128
+```
