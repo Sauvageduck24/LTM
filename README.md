@@ -9,6 +9,7 @@ Download necesary data
 -------------------------------------
 
 [GLUE Benchmark Datasets] https://github.com/nyu-mll/GLUE-baselines
+
 [BERT-Base, Uncased] https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip
 
 Simple Transformer (67.0 M Parameters)
